@@ -1,0 +1,258 @@
+@media screen and (min-width: 750px) {
+  html {
+    font-size: 37.5px!important;
+  }
+}
+@basefont: 37.5;
+
+body {
+  max-width: 750px;
+  min-width: 320px;
+  margin: 0 auto;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #f2f4f7;
+}
+// 第一个模块
+.wrap {
+  background: #fff;
+  padding-bottom: (43rem / @basefont);
+}
+// header
+.header {
+  width: (750rem / @basefont);
+  height: (88rem / @basefont);
+  border-bottom: #eaeaea 1px solid;
+  text-align: center;
+  line-height: (88rem / @basefont);
+  font-size: (30rem / @basefont);
+}
+
+// nav
+.nav {
+  display: flex;
+  flex-wrap: wrap; // 换行
+  padding: (45rem / @basefont) 0 (60rem / @basefont) 0;
+  .item {
+    display: flex;
+    width: 33.33%;
+    flex-direction: column; // 纵向
+    align-items: center; // 水平居中
+    img {
+      width: (139rem / @basefont);
+      height: (139rem / @basefont);
+    }
+    span {
+      font-size: (16rem / @basefont);
+      color: #333;
+    }
+    &:nth-child(-n+3) {
+      margin-bottom: (62rem / @basefont);
+    }
+  }
+}
+// ad
+.ad {
+  
+  margin: 0 (10rem / @basefont) 0 (18rem / @basefont);
+
+}
+
+// 第二模块
+.content {
+  padding: (40rem / @basefont) (22rem / @basefont);
+  margin-top: (10rem / @basefont);
+  background-color: #fff;
+}
+
+// 就业指导和充电学习
+.dm-five,
+.learning,
+.employment {
+  // 头部
+  .con-hd {
+    display: flex;
+    height: (38rem / @basefont);
+    line-height: (38rem / @basefont);
+    justify-content: space-between; // 两边对齐
+    div {
+      font-size: (28rem / @basefont);
+      color: #333;
+      font-weight: 700;
+      .icon {
+        display: inline-block;
+        width: (38rem / @basefont);
+        height: (38rem / @basefont);
+        vertical-align: middle; // 基线对齐
+      }
+    }
+    .more {
+      font-size: (22rem / @basefont);
+      color: #999;
+    }
+  }
+}
+
+// 就业-旋转木马轮播图
+.dm-five,
+.get-job-bd {
+  position: relative;
+  margin-top: (34rem / @basefont);
+.swiper-container {
+  //width: 100%;
+  width: (540rem / @basefont); // 将宽度限定在540px
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: (18rem / @basefont);
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column; // 纵向显示
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  transition: 300ms;
+  transform: scale(0.8); // 其余兄弟0.8
+  opacity: 0.3;
+  a {
+    width: (338rem / @basefont);
+    height: (376rem / @basefont);
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  span {
+    width: (338rem / @basefont);
+    font-size: (25rem / @basefont);
+    color: #333;
+    margin-top: (24rem / @basefont);
+  }
+}
+// 当前选中的slice
+  .swiper-slide-active,
+  .swiper-slide-duplicate-active {
+    transform: scale(1);
+    z-index: 999; // 直接调整层级
+    opacity: 1;
+  }
+  // 箭头
+  .swiper-button-next,
+  .swiper-button-prev {
+    outline: none;
+    font-size: (38rem / @basefont);
+    color: #333;
+  }
+}
+
+// 充电-轮播图
+.learning-bd {
+  overflow: hidden;
+  margin-top: (20rem / @basefont);
+  .swiper {
+    padding: (10rem / @basefont);
+  }
+
+  .swiper-slide {
+    width: (290rem / @basefont);
+    height: (340rem / @basefont);
+    border-radius: (10rem / @basefont);
+    font-size: 18px;
+    background: #fff;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+    span {
+      display: block;
+      font-size: (28rem / @basefont);
+      margin-top: (20rem / @basefont);
+      padding: 0 (10rem / @basefont);
+    }
+    p {
+      font-size: (20rem / @basefont);
+      color: #ff4400;
+      margin-top: (20rem / @basefont);
+      padding: 0 (10rem / @basefont);
+    }
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    height: (171rem / @basefont);
+  }
+}
+
+// 第5模块
+.dm {
+  position: relative;
+  height: (200rem / @basefont);
+  margin-bottom: (300rem / @basefont);
+  h4 {
+    height: (25rem / @basefont);
+    margin: 0;
+    background-color: rgb(142, 242, 242);
+    text-align: center;
+    line-height: (25rem / @basefont);
+    font-size: (25rem / @basefont);
+  }
+  .swiper {
+    width: (300rem / @basefont);
+    height: (300rem / @basefont);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -(150rem / @basefont);
+
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+.fenjiexian {
+  height: 10px;
+  margin: (50rem / @basefont);
+}
+// 底部
+.footer {
+  display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: (110rem / @basefont);
+  background-color: #fff;
+  z-index: 99999;
+  padding: (20rem / @basefont);
+  border-top: 1px solid #ccc;
+  .f-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      width: (39rem / @basefont);
+      height: (41rem / @basefont);
+    }
+    p {
+      font-size: (22rem / @basefont);
+      color: #666;
+      margin-top: (10rem / @basefont);
+    }
+  }
+}
